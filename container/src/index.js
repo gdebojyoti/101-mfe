@@ -1,1 +1,3 @@
-console.log("I got in @ Container!");
+import("./bootstrap");
+
+console.log("Bootstrap requested asynchronously...");

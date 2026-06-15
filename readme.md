@@ -6,7 +6,7 @@ Random stuff related to micro front-end architecture with Webpack's Module Feder
 ### Gotchas
 
 - Element "id" (in host/container's index.html) cannot be the same as the remote app's "name" (in remote's webpack config)
-[Error: `SES_UNHANDLED_REJECTION: TypeError: fn is not a function while loading ./output from webpack/container/reference/ttt`]
+[Error: `SES_UNHANDLED_REJECTION: TypeError: fn is not a function while loading ./output from webpack/container/reference/pokedex`]
 
 ---
 
