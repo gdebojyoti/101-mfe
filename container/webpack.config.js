@@ -10,7 +10,8 @@ module.exports = {
     new ModuleFederationPlugin({
       // name: "container",
       remotes: {
-        pokedex: "pokedex@http://localhost:4001/remoteEntry.js"
+        pokedex: "pokedex@http://localhost:4001/remoteEntry.js",
+        quiz: "quiz@http://localhost:4002/remoteEntry.js"
       }
     }),
     new HtmlWebpackPlugin({
