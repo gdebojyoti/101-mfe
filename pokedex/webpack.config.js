@@ -14,7 +14,7 @@ module.exports = {
       name: "pokedex",
       filename: "remoteEntry.js",
       exposes: {
-        "./index": "./src/index"
+        "./index": "./src/bootstrap"
       }
     }),
     new HtmlWebpackPlugin({
