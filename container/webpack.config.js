@@ -11,7 +11,8 @@ module.exports = {
       // name: "container",
       remotes: {
         pokedex: "pokedex@http://localhost:4001/remoteEntry.js",
-        quiz: "quiz@http://localhost:4002/remoteEntry.js"
+        quiz: "quiz@http://localhost:4002/remoteEntry.js",
+        profile: "profile@http://localhost:4003/remoteEntry.js"
       }
     }),
     new HtmlWebpackPlugin({
