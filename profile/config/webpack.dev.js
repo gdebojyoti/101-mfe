@@ -10,9 +10,7 @@ const devConfig = {
     headers: {
       "Cross-Origin-Resource-Policy": "cross-origin"
     },
-    historyApiFallback: {
-      index: "index.html"
-    }
+    historyApiFallback: true
   },
   plugins: [
     new ModuleFederationPlugin({

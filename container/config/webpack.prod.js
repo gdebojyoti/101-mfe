@@ -6,7 +6,7 @@ const commonConfig = require("./webpack.common");
 const domain = process.env.PRODUCTION_DOMAIN;
 
 const devConfig = {
-  mode: "development",
+  mode: "production",
   output: {
     filename: "[name].[contenthash].js"
   },
