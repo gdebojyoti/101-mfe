@@ -1,24 +1,27 @@
-import { Link, Switch, Route } from "wouter";
+import { Link, Switch, Route, Router } from "wouter";
 
 import Settings from "./Settings";
 
-const App = () => {
+const App = ({ location }) => {
   return (
     <>
       <h1>Profile app</h1>
-
-      <Link href="/profile">Profile base</Link>
-      <Link href="/profile/settings">Profile settings</Link>
       
-      <Switch>
-        <Route href="/">
-          <h2>This is your profile</h2>
-        </Route>
+      <Router base="/profile" hook={location.hook}>
+        <Link href="/">Profile home</Link>
+        &nbsp;
+        <Link href="/settings">Profile settings</Link>
 
-        <Route href="/settings" component={Settings} />
+        <Switch>
+          <Route path="/">
+            <h2>This is your profile</h2>
+          </Route>
 
-        <Route>404: Missing sub-route in Profile app</Route>
-      </Switch>
+          <Route path="/settings" component={Settings} />
+
+          <Route>404: Missing sub-route in Profile app</Route>
+        </Switch>
+      </Router>
     </>
   )
 }

@@ -1,11 +1,13 @@
 import { createRoot } from "react-dom/client";
+import { memoryLocation } from "wouter/memory-location";
 
 import App from "./components/App";
 
 const mount = (elm) => {
   const root = createRoot(elm);
-  // root.render(<h1>Old Profile app</h1>);
-  root.render(<App />);
+  const location = memoryLocation()
+
+  root.render(<App location={location} />);
 }
 
 if (process.env.NODE_ENV === "development") {
