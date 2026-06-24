@@ -27,7 +27,7 @@ if (process.env.NODE_ENV === "development") {
   const elm = document.getElementById("_profile-app-root");
 
   if (elm) {
-    mount(elm);
+    mount(elm, {});
   }
 }
 

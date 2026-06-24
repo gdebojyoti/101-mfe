@@ -19,8 +19,7 @@ const Routes = ({ onNavigate }) => {
   const [loc] = useLocation();
 
   useEffect(() => {
-    console.warn("!!!")
-    onNavigate(loc);
+    onNavigate && onNavigate(loc);
   }, [loc])
 
   return (
