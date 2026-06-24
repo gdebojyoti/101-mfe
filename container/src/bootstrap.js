@@ -9,8 +9,8 @@ console.log("I got in @ Container!");
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-import Profile from "./components/Profile";
+import App from "./components/App";
 
 const rootElm = document.getElementById("root");
 const root = createRoot(rootElm);
-root.render(<Profile />);
+root.render(<App />);

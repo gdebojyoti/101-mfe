@@ -6,7 +6,8 @@ const commonConfig = require("./webpack.common");
 const devConfig = {
   mode: "development",
   devServer: {
-    port: 4000
+    port: 4000,
+    historyApiFallback: true
   },
   plugins: [
     new ModuleFederationPlugin({
