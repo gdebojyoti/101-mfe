@@ -3,11 +3,24 @@ import { memoryLocation } from "wouter/memory-location";
 
 import App from "./components/App";
 
-const mount = (elm) => {
+const mount = (elm, { onNavigate }) => {
   const root = createRoot(elm);
-  const location = memoryLocation()
 
-  root.render(<App location={location} />);
+  const location = memoryLocation({
+    base: "/profile",
+    path: "/"
+  });
+
+  location.navigate("/");
+
+  root.render(<App location={location} onNavigate={onNavigate} />);
+
+  return {
+    onParentNavigate: (pathname) => {
+      console.log("Container just navigated!")
+      location.navigate(pathname);
+    }
+  };
 }
 
 if (process.env.NODE_ENV === "development") {

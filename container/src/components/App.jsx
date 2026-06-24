@@ -17,6 +17,7 @@ const App = () => {
         </Route>
         
         <Route path="/profile" component={Profile} />
+        <Route path="/profile/:rest" component={Profile} />
 
         <Route>
           <h1>404: No such page!</h1>
