@@ -1,4 +1,5 @@
 import { Link, Route, Switch } from "wouter";
+
 import Profile from "./Profile";
 
 const App = () => {
