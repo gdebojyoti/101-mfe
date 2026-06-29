@@ -3,10 +3,15 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 
 const commonConfig = require("./webpack.common");
 
+const PORT = 4003;
+
 const devConfig = {
   mode: "development",
+  output: {
+    publicPath: `http://localhost:${PORT}/`
+  },
   devServer: {
-    port: 4003,
+    port: PORT,
     headers: {
       "Cross-Origin-Resource-Policy": "cross-origin"
     },
